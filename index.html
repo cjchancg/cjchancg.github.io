@@ -253,6 +253,7 @@
     }
 
     /* ── Photo hover strip ── */
+    /* Dashboard is 2000x616 (3.25:1), team photo is 2000x1123 (1.78:1) */
     .photo-strip {
       display: flex;
       flex-direction: column;
@@ -261,11 +262,11 @@
       overflow: hidden;
       max-height: 0;
       opacity: 0;
-      transition: max-height 0.45s ease, opacity 0.35s ease;
+      transition: max-height 0.5s ease, opacity 0.4s ease;
     }
 
     .card:hover .photo-strip {
-      max-height: 280px;
+      max-height: 460px;
       opacity: 1;
     }
 
@@ -274,18 +275,19 @@
       border-radius: 6px;
       border: 1px solid var(--rule);
       display: block;
+      object-fit: cover;
     }
 
+    /* Dashboard 3.25:1 — 200px height at full width = minimal cropping */
     .photo-strip img:first-child {
-      height: 110px;
-      object-fit: cover;
-      object-position: center top;
+      height: 200px;
+      object-position: center center;
     }
 
+    /* Team photo 1.78:1 — 220px height at full width shows faces well */
     .photo-strip img:last-child {
-      height: 120px;
-      object-fit: cover;
-      object-position: left center;
+      height: 220px;
+      object-position: center top;
     }
 
     /* ── Stats ── */
@@ -412,7 +414,7 @@
       <a class="nav-name" href="#">Carson Chan</a>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#93f0f2e1e0fcfdf9f0f4f0fbf2fdd3f4fef2faffbdf0fcfe">Contact</a></li>
+        <li><a class="email-link" href="#" data-user="carsonjcgchan" data-domain="gmail.com">Contact</a></li>
       </ul>
     </nav>
 
@@ -437,7 +439,7 @@
             </svg>
             LinkedIn
           </a>
-          <a class="social-link" href="/cdn-cgi/l/email-protection#1f7c7e6d6c7071757c787c777e715f78727e7673317c7072">
+          <a class="social-link email-link" href="#" data-user="carsonjcgchan" data-domain="gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
@@ -522,6 +524,12 @@
                 <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
               </svg>
             </a>
+            <a class="card-link" href="https://youtu.be/66Ae-m9vfTs" target="_blank" rel="noopener">
+              Demo Video
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
           </div>
 
           <!-- Hover photo strip -->
@@ -569,6 +577,21 @@
             <span class="tech-pill">Pathing Reports</span>
             <span class="tech-pill">Google My Maps</span>
             <span class="tech-pill">Route Planning</span>
+          </div>
+
+          <div class="card-links">
+            <a class="card-link" href="https://youtu.be/CvxuA59qy9w?si=ce2L6IKEWPyS9iVn" target="_blank" rel="noopener">
+              Demo Video
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
+            <a class="card-link" href="https://www.google.com/maps/d/u/0/edit?mid=18t0kHvXnHnK2LXJi_C1gG86bVH7GH60&usp=sharing" target="_blank" rel="noopener">
+              Interactive Map
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+              </svg>
+            </a>
           </div>
         </div>
 
