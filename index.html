@@ -286,7 +286,7 @@
 
     /* Team photo 1.78:1 — 220px height at full width shows faces well */
     .photo-strip img:last-child {
-      height: 390px;
+      height: 220px;
       object-position: center top;
     }
 
@@ -361,6 +361,43 @@
       border-radius: 2rem;
     }
 
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .contact-value {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+      width: fit-content;
+    }
+
+    .contact-value:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
     /* ── Footer ── */
     footer {
       padding: 3rem 0;
@@ -414,7 +451,7 @@
       <a class="nav-name" href="#">Carson Chan</a>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
-        <li><a class="email-link" href="#" data-user="carsonjcgchan" data-domain="gmail.com">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -439,7 +476,7 @@
             </svg>
             LinkedIn
           </a>
-          <a class="social-link email-link" href="#" data-user="carsonjcgchan" data-domain="gmail.com">
+          <a class="social-link" href="#contact">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
@@ -617,6 +654,26 @@
           </div>
         </div>
 
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+      <p class="section-label">Get in Touch</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a class="contact-value contact-email" href="#" data-user="carsonjcgchan" data-domain="gmail.com">carsonjcgchan@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Phone</span>
+          <a class="contact-value" href="tel:+15879175672">(587) 917-5672</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <a class="contact-value" href="https://www.linkedin.com/in/carsonjcgchan/" target="_blank" rel="noopener">carsonjcgchan</a>
+        </div>
       </div>
     </section>
 
